@@ -1,5 +1,5 @@
 package Apache::CPANTS::XML;
-# $Id: XML.pm,v 1.3 2003/04/25 18:40:10 cwest Exp $
+# $Id: XML.pm,v 1.4 2003/04/25 19:11:12 cwest Exp $
 # -*- cperl-mode -*-
 use strict;
 use Apache;
@@ -9,12 +9,12 @@ use vars qw[$VERSION];
 use Module::CPANTS;
 use XML::Simple;
 
-$VERSION = (qw$Revision: 1.3 $)[1];
+$VERSION = (qw$Revision: 1.4 $)[1];
 
 sub handler {
   my ($r) = @_;
 
-  my $package = $r->query_string;
+  my $package = $r->args->{dist};
   my $data    = Module::CPANTS->data->{$package};
 
   return NOT_FOUND unless $data;
@@ -70,7 +70,7 @@ provided by L<Module::CPANTS|Module::CPANTS>.
 
 =head2 Interface
 
-  http://example.com/?[dist name]
+  http://example.com/?dist=[dist name]
 
 The C<[dist name]> must be a full distribution file name.
 
