@@ -1,0 +1,6 @@
+INSTALL
+MANIFEST
+Makefile.PL
+README
+lib/Apache/CPANTS/XML.pm
+t/simple.t

@@ -1,0 +1,33 @@
+NAME
+    Apache::CPANTS::XML - XML Web Service for CPANTS metrics
+
+SYNOPSIS
+      <Location />
+        PerlModule  Apache::CPANTS::XML
+        SetHandler  perl-script
+        PerlHandler Apache::CPANTS::XML
+      </Location>
+
+DESCRIPTION
+    This module provides an XML based web service for CPANTS metrics
+    provided by Module::CPANTS.
+
+  Interface
+
+      http://example.com/?[dist name]
+
+    The "[dist name]" must be a full distribution file name.
+
+AUTHOR
+    Casey West <casey@geeknest.com>
+
+COPYRIGHT
+      Copyright (c) 2003 Casey West <casey@geeknest.com>.  All
+      rights reserved.  This program is free software; you can
+      redistribute it and/or modify it under the same terms as
+      Perl itself.
+
+SEE ALSO
+    the perl manpage, the Module::CPANTS manpage, the XML::Simple manpage,
+    the Apache manpage.
+
